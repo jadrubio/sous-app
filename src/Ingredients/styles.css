@@ -1,0 +1,12 @@
+.checked {
+  color: grey;
+  text-decoration: line-through;
+}
+.quantity {
+  margin-left: 5px;
+}
+.quantity,
+.unit,
+.item {
+  margin-right: 5px;
+}
