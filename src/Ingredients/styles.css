@@ -1,3 +1,17 @@
+/*.ingredient-list-group {*/
+/*  display: none;*/
+/*}*/
+
+.ingredient-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ingredient-column {
+  flex: 1 0 50%;
+  padding-right: 15px;
+}
+
 .checked {
   color: grey;
   text-decoration: line-through;
@@ -9,4 +23,10 @@
 .unit,
 .item {
   margin-right: 5px;
+}
+
+@media (min-width: 992px) {
+  .ingredient-list-group {
+    display: block;
+  }
 }
