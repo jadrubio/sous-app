@@ -21,7 +21,7 @@ export const mockRecipe: RecipeType = {
     {
       quantity: 28,
       unit: "grams",
-      item: "Olive Oil (or other neutral oil",
+      item: "Olive Oil (or other neutral oil)",
     },
     {
       quantity: 11,

@@ -9,9 +9,8 @@ const Ingredient = ({ingredient}: IngredientProp) => {
   const checkedStyle = isChecked ? " checked" : "";
 
   return (
-    <li className="">
+    <li className="ingredient-item">
       <input
-        className=""
         type="checkbox"
         value=""
         onClick={() => setIsChecked(!isChecked)}
