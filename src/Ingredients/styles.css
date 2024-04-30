@@ -12,17 +12,12 @@
 .single-column {
     flex: 1 0 100%;
     padding-right: 0;
-
 }
 
 .ingredient-item {
+    margin-top: 15px;
     list-style-type: none;
     border-bottom: 1px solid rgba(0, 0, 0, .125);
-}
-
-.checked {
-    color: grey;
-    text-decoration: line-through;
 }
 
 .quantity {

@@ -13,11 +13,11 @@ const IngredientList = ({ ingredients }: IngredientListType) => {
       <h3>Ingredients</h3>
       <div className={`ingredient-list-group ${isSingleColumn ? 'single-column' : ''}`}>
         <div className="ingredient-row">
-          <article className={`ingredient-column ${isSingleColumn ? 'single-column' : ''}`}>
+          <ul className={`ingredient-column ${isSingleColumn ? 'single-column' : ''}`}>
             {ingredients.map((ingredient: IngredientType, index: number) => (
                 <Ingredient key={index} ingredient={ingredient} />
             ))}
-          </article>
+          </ul>
         </div>
       </div>
     </section>
