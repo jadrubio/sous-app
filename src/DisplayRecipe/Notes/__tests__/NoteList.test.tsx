@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import NoteList from "../NoteList.tsx";
-import { mockRecipe } from "../../mockData/mockRecipe";
+import { mockRecipe } from "../../../mockData/mockRecipe.ts";
 
 describe("Direction List", () => {
   it("should render the heading", () => {

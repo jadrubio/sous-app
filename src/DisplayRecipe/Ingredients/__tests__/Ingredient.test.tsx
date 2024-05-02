@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
-import Ingredient from "../Ingredient";
+import Ingredient from "../Ingredient.tsx";
 
 const mockIngredient = {
   quantity: 12,

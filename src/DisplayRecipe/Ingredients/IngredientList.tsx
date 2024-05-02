@@ -1,8 +1,9 @@
 import Ingredient from "./Ingredient.tsx";
 import { IngredientListType, IngredientType } from "./IngredientTypes.ts";
 import "./styles.css";
+import React from "react";
 
-const IngredientList = ({ ingredients }: IngredientListType) => {
+const IngredientList: React.FC<IngredientListType> = ({ ingredients }) => {
   const numIngredients: number = ingredients.length;
 
   // Determine whether to display one or two columns
@@ -10,12 +11,15 @@ const IngredientList = ({ ingredients }: IngredientListType) => {
 
   return (
     <section>
-      <h3>Ingredients</h3>
-      <div className={`ingredient-list-group ${isSingleColumn ? 'single-column' : ''}`}>
+      <div
+        className={`ingredient-list-group ${isSingleColumn ? "single-column" : ""}`}
+      >
         <div className="ingredient-row">
-          <ul className={`ingredient-column ${isSingleColumn ? 'single-column' : ''}`}>
+          <ul
+            className={`ingredient-column ${isSingleColumn ? "single-column" : ""}`}
+          >
             {ingredients.map((ingredient: IngredientType, index: number) => (
-                <Ingredient key={index} ingredient={ingredient} />
+              <Ingredient key={index} ingredient={ingredient} />
             ))}
           </ul>
         </div>

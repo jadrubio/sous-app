@@ -1,4 +1,4 @@
-import { IngredientType } from "../Ingredients/IngredientTypes";
+import { IngredientType } from "../DisplayRecipe/Ingredients/IngredientTypes";
 
 type RecipeType = {
   ingredients: IngredientType[];

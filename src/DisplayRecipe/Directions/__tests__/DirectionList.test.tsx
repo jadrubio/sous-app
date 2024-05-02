@@ -1,4 +1,4 @@
-import { mockRecipe } from "../../mockData/mockRecipe";
+import { mockRecipe } from "../../../mockData/mockRecipe.ts";
 import DirectionList from "../DirectionList.tsx";
 import { render, screen } from "@testing-library/react";
 

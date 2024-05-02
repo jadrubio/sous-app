@@ -1,6 +1,7 @@
+import React from "react";
 import { NoteType } from "./NoteTypes.ts";
 
-const Note = ({ note, nested }: NoteType) => {
+const Note: React.FC<NoteType> = ({ note, nested }) => {
   return (
     <li>
       {note}
