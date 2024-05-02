@@ -1,15 +1,28 @@
 import React, { useState } from "react";
-import "./styles.css";
-import { DirectionType } from "./DirectionType.ts";
+import { DirectionType } from "./DirectionType";
 
 const Direction: React.FC<DirectionType> = ({ step }) => {
   const [isChecked, setIsChecked] = useState(false);
-  const checkedStyle = isChecked ? " checked" : "";
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLLIElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleToggle();
+    }
+  };
 
   return (
     <li
-      onClick={() => setIsChecked(!isChecked)}
-      className={`direction-item ${checkedStyle}`}
+      role="button"
+      tabIndex={0}
+      onClick={handleToggle}
+      onKeyDown={handleKeyDown}
+      className={`direction-item ${isChecked ? "checked" : ""}`}
+      aria-pressed={isChecked}
     >
       {step}
     </li>
