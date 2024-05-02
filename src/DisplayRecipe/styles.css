@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    grid-template-areas:
+      'ingredients directions'
+      'ingredients directions'
+      'notes notes';
+}
+
+
+.ingredients {
+    grid-area: ingredients;
+}
+
+.directions {
+    grid-area: directions;
+    grid-column: span 2;
+}
+
+.notes {
+    grid-area: notes;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-areas:
+            "ingredients"
+            "directions"
+            "notes";
+    }
+    ul,
+    ol {
+        padding-inline-start: 0;
+    }
+}

@@ -1,0 +1,20 @@
+.direction-input-container,
+.ingredient-input-container {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #ingredients-helper-text {
+        font-style: italic;
+        color: #666;
+    }
+}
