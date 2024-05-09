@@ -1,9 +1,10 @@
-import { IngredientType } from "../DisplayRecipe/Ingredients/IngredientTypes";
+import { IngredientType } from "../UI/Ingredients/IngredientTypes";
+import { SectionItemType } from "../UI/Section/SectionTypes.ts";
 
 type RecipeType = {
   ingredients: IngredientType[];
-  directions: any;
-  notes: any;
+  directions: SectionItemType[];
+  notes: SectionItemType[];
 };
 
 export const mockRecipe: RecipeType = {
@@ -35,13 +36,12 @@ export const mockRecipe: RecipeType = {
     },
   ],
   directions: [
-    { step: "Combine all ingredients in a bowl and mix well." },
-    { step: "Let set for 20 minutes if using right away." },
+    { info: "Combine all ingredients in a bowl and mix well." },
+    { info: "Let set for 20 minutes if using right away." },
   ],
   notes: [
-    {
-      note: "Add flavoring to the batter by mixing in:",
-      nested: ["Minced garlic", "Red pepper flakes"],
-    },
+    { info: "Add flavoring to the batter by mixing in:" },
+    { info: "Minced garlic" },
+    { info: "Red pepper flakes" },
   ],
 };
