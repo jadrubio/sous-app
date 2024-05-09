@@ -1,16 +1,15 @@
-import Ingredient from "./Ingredient.tsx";
-import { IngredientListType, IngredientType } from "./IngredientTypes.ts";
-import "./styles.css";
 import React from "react";
+import { IngredientListType } from "./IngredientTypes.ts";
+import Ingredient from "./Ingredient.tsx";
+import "./styles.css";
 
 const IngredientList: React.FC<IngredientListType> = ({ ingredients }) => {
-  const numIngredients: number = ingredients.length;
-
-  // Determine whether to display one or two columns
+  const numIngredients = ingredients.length;
   const isSingleColumn = window.innerWidth < 992 || numIngredients <= 7;
 
   return (
-    <section>
+    <section aria-labelledby="ingredient-list-heading">
+      <h2 id="ingredient-list-heading">Ingredients</h2>
       <div
         className={`ingredient-list-group ${isSingleColumn ? "single-column" : ""}`}
       >
@@ -18,8 +17,11 @@ const IngredientList: React.FC<IngredientListType> = ({ ingredients }) => {
           <ul
             className={`ingredient-column ${isSingleColumn ? "single-column" : ""}`}
           >
-            {ingredients.map((ingredient: IngredientType, index: number) => (
-              <Ingredient key={index} ingredient={ingredient} />
+            {ingredients.map((ingredient) => (
+              <Ingredient
+                key={`${ingredient.unit}${ingredient.item}`}
+                ingredient={ingredient}
+              />
             ))}
           </ul>
         </div>
