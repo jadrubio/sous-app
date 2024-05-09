@@ -2,7 +2,6 @@
     display: grid;
     grid-template-areas:
       'ingredients directions'
-      'ingredients directions'
       'notes notes';
 }
 
@@ -28,8 +27,11 @@
             "directions"
             "notes";
     }
+    .ingredient-row {
+        width: 100%;
+    }
     ul,
     ol {
-        padding-inline-start: 0;
+        padding-inline-start: 10px;
     }
 }
