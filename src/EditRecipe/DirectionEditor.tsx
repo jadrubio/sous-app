@@ -6,7 +6,6 @@ import "./styles.css";
 
 const DirectionEditor: React.FC = () => {
   const dispatch = useDispatch();
-
   const [directionsText, setDirectionsText] = useState("");
 
   const handleTextareaChange = (event: ChangeEvent<HTMLTextAreaElement>) => {

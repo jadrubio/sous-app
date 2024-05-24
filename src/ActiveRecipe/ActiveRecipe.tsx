@@ -1,9 +1,9 @@
-import "./styles.css";
 import IngredientList from "../UI/Ingredients/IngredientList.tsx";
-import { mockRecipe } from "../mockData/mockRecipe.ts";
 import SectionList from "../UI/Section/SectionList.tsx";
+import { mockRecipe } from "../mockData/mockRecipe.ts";
+import "./styles.css";
 
-const DisplayRecipe = () => {
+const ActiveRecipe = () => {
   return (
     <div className="container">
       <div className="box ingredients">
@@ -24,4 +24,4 @@ const DisplayRecipe = () => {
   );
 };
 
-export default DisplayRecipe;
+export default ActiveRecipe;

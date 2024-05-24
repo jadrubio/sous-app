@@ -1,0 +1,43 @@
+.direction-input-container,
+.ingredient-input-container {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    textarea {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #ingredients-helper-text {
+        font-style: italic;
+        color: #666;
+    }
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add some spacing between the containers */
+}
+
+@media (min-width: 600px) {
+    .editor-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .editor-container > * {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .editor-container > *:last-child {
+        margin-right: 0;
+    }
+}
