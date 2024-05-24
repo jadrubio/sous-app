@@ -1,24 +1,18 @@
 import React, { useState, ChangeEvent } from "react";
+import { useDispatch } from "react-redux";
+import { updateIngredients } from "../store/ingredientSlice.ts";
+import { parseStringToArray } from "../utils/parsing.ts";
 import "./styles.css";
 
 const IngredientEditor: React.FC = () => {
+  const dispatch = useDispatch();
   const [ingredientsText, setIngredientsText] = useState("");
-  const [ingredientsArray, setIngredientsArray] = useState<string[]>([]);
-
-  const parseIngredients = (text: string): string[] => {
-    const lines = text
-      .split("\n")
-      .map((line) => line.trim())
-      .filter((line) => line !== "");
-    return lines;
-  };
 
   const handleTextareaChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     const newText = event.target.value;
     setIngredientsText(newText);
-
-    const parsedIngredients = parseIngredients(newText);
-    setIngredientsArray(parsedIngredients);
+    const parsedIngredients = parseStringToArray(newText);
+    dispatch(updateIngredients(parsedIngredients));
   };
 
   return (
@@ -39,15 +33,6 @@ const IngredientEditor: React.FC = () => {
         <p id="ingredients-helper-text">
           Please use numbers and standard measuring amounts e.g. 1 cup flour
         </p>
-      </div>
-
-      <div>
-        <h3>Parsed Ingredients:</h3>
-        <ul>
-          {ingredientsArray.map((ingredient, index) => (
-            <li key={index}>{ingredient}</li>
-          ))}
-        </ul>
       </div>
     </>
   );
