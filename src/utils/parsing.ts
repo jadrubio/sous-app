@@ -1,11 +1,10 @@
-import { IngredientType } from "../UI/Ingredients/IngredientTypes.ts";
+import { IngredientType } from "../ActiveRecipe/Ingredients/IngredientTypes.ts";
 
 export const parseStringToArray = (text: string): string[] => {
-  const lines = text
+  return text
     .split("\n")
     .map((line) => line.trim())
     .filter((line) => line !== "");
-  return lines;
 };
 
 export const parseIngredientArraytoObj = (

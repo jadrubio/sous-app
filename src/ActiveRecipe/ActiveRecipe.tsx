@@ -1,5 +1,5 @@
-import IngredientList from "../UI/Ingredients/IngredientList.tsx";
-import SectionList from "../UI/Section/SectionList.tsx";
+import IngredientList from "./Ingredients/IngredientList.tsx";
+import SectionList from "./Section/SectionList.tsx";
 import { mockRecipe } from "../mockData/mockRecipe.ts";
 import "./styles.css";
 

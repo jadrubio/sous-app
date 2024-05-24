@@ -1,5 +1,5 @@
-import { IngredientType } from "../UI/Ingredients/IngredientTypes";
-import { SectionItemType } from "../UI/Section/SectionTypes.ts";
+import { IngredientType } from "../ActiveRecipe/Ingredients/IngredientTypes";
+import { SectionItemType } from "../ActiveRecipe/Section/SectionTypes.ts";
 
 type RecipeType = {
   ingredients: IngredientType[];

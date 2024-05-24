@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
-import SectionItem from "../SectionItem";
+import SectionItem from "../SectionItem.tsx";
 
 describe("SectionItem", () => {
   const defaultProps = {

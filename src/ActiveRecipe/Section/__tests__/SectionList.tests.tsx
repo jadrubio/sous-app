@@ -1,5 +1,5 @@
 import { fireEvent, render } from "@testing-library/react";
-import SectionList from "../SectionList";
+import SectionList from "../SectionList.tsx";
 
 describe("SectionList Component", () => {
   const displayItems = [
