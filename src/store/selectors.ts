@@ -5,3 +5,5 @@ export const selectIngredients = (state: RootState) =>
 
 export const selectDirections = (state: RootState) =>
   state.directionEditor.directions;
+
+export const selectNotes = (state: RootState) => state.noteEditor.notes;
