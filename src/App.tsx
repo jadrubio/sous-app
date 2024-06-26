@@ -1,10 +1,7 @@
-import { useEffect } from "react";
 import EditRecipe from "./EditRecipe";
 
 function App() {
-  useEffect(() => {
-    console.log("runnaway?");
-  });
+
   return (
     <>
       <h1 className="read-the-docs">Sous App</h1>
